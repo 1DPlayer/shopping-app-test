@@ -1,0 +1,316 @@
+body {
+    font-family: Roboto;
+    color: #212121;
+    background: #ffffff;
+    margin: 0;
+    counter-reset: Serial;
+}
+#table {padding-bottom: 30px;max-width: 550px;margin: auto;background: #ffffff;}
+#table-area {
+}
+.pics {
+    width: 60px;
+}
+.item {
+    position: absolute;
+    left: 36px;
+    top: 3px;
+}
+.data2 {
+    width: calc(100% - 160px);
+    position: absolute;
+    left: 95px;
+    bottom: 5px;
+}
+.number {
+	width: 28px;
+	height: 35px;
+	text-align: center;
+	position: absolute;
+	color: #383838;
+	background: #e8e8e8;
+	left: 0;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border: 1px solid #868686;
+	border-top: none;
+}
+.number .n-number {
+	font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    top: 36px;
+}
+.item-name {
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 2px;
+}
+.tracking-number {
+	font-family: monospace;
+	font-size: 13px;
+	letter-spacing: 2px;
+	position: relative;
+	border-radius: 7px;
+	line-height: 11px;
+}
+.tr {
+    height: 75px;
+    margin: 10px 0;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    width: 100%;
+    background: #ffffff;
+}
+.pic {
+	width: 74px;
+	border-right: 1px solid #868686;
+	box-sizing: border-box;
+}
+.pic img {
+	width: 100%;
+}
+.data1 {
+	width: calc(100% - 125px);
+	height: 40px;
+	position: absolute;
+	left: 60px;
+	top: 0;
+}
+.status {
+	color: #ffffff;
+	text-align: center;
+	line-height: 8px;
+	font-size: 8px;
+	text-transform: uppercase;
+	width: 25px;
+	height: 100%;
+	padding-top: 10px;
+	box-sizing: border-box;
+	right: 0;
+	top: 0;
+	position: absolute;
+}
+.status.waiting{ background-color: #9b316d; }
+.status.received {
+	background-color: #699b31;
+	line-height: 7px;
+}
+#fade {
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0;
+    opacity: 0.5;
+}
+#set-status {
+	display: ;
+	width: 400px;
+    height: 200px;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #a7a7a7;
+}
+.deadline {
+	border-bottom-left-radius: 13px;
+	border-top-left-radius: 13px;
+	width: 33px;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+	line-height: 12px;
+	font-size: 15px;
+	font-weight: 400;
+	position: absolute;
+	right: 24px;
+	top: 0;
+	background: #808080;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+.store-pic {
+	height: 15px;
+	position: absolute;
+	left: 95px;
+	bottom: 18px;
+	width: 60px;
+}
+.store-pic.aliexpress {
+    background: url(../pic/aliexpress.png) no-repeat;
+    background-size: 58px auto;
+    background-position: center;
+}
+.store-pic.ebay {
+    background: url(../pic/ebay.png) no-repeat;
+    background-size: auto 15px;
+    background-position: left;
+}
+.store-pic.wish {
+    background: url(../pic/wish.png) no-repeat;
+    background-size: auto 14px;
+    background-position: left;
+}
+.data2 .login {
+	font-size: 11px;
+	font-weight: 500;
+	width: calc(100% - 87px);
+}
+.data2 .dates {
+	position: absolute;
+	font-size: 11px;
+	text-transform: uppercase;
+	width: 80px;
+	right: 0;
+	height: 24px;
+	bottom: 0;
+}
+.data2 .dates .bought {
+	position: absolute;
+    left: 0;
+}
+.data2 .dates .shipped {
+	position: absolute;
+    right: 0;
+}
+.dates span {
+	font-weight: 600;
+}
+header {
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 42px;
+    /* box-shadow: 0 0 15px 0 #00000042; */
+    z-index: 1;
+    /* border-top: 1px solid #8c8c8c; */
+}
+header input {
+    position: absolute;
+    margin: auto;
+    left: 33px;
+    top: 0;
+    bottom: 0;
+    width: 234px;
+    height: 25px;
+    padding: 0 10px;
+    border: none;
+    background: #ffffff;
+    user-select: none;
+}
+header #search-area {
+    background: url(../pic/search.png) no-repeat;
+    background-size: 16px;
+    background-position: 10px;
+    border: 1px solid #e0e0e0;
+    height: 25px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.number:after {
+	counter-increment: Serial;
+	content: counter(Serial);
+	font-size: 18px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 12px;
+}
+.number:before {
+    content: "N?";
+    font-size: 8px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 5px;
+}
+.deadline:after {
+    content: "\A day/s";
+    font-size: 10px;
+    font-weight: 100;
+    white-space: pre;
+}
+.data1:after {
+    content: '';
+    height: 1px;
+    width: calc(100% - 35px);
+    background: #e0e0e0;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+}
+.before:after {
+    content: '';
+    height: 78px;
+    width: 660px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 0 15px 0 #00000078;
+}
+#search-area:after {
+    content: '';
+    height: 20px;
+    width: 1px;
+    position: absolute;
+    left: 34px;
+    background: #e0e0e0;
+    top: 5px;
+}
+input:focus {
+    outline: none !important;
+    border: none !important;
+}
+.before {
+    border-color: transparent;
+}
+::selection {
+  background: transparent;
+  color: red;
+}
+::-moz-selection {
+  background: transparent;
+  color: red;
+}
+
+#no-results{
+    left: 0;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 106px;
+    z-index: -1;
+}
+.on {
+    box-shadow: 0px 0px 40px 2px #00000073;
+    z-index: 1;
+    border: transparent;
+}
+.tr:first-of-type {
+    margin: 0;
+    border-top: none;
+}
